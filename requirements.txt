@@ -8,7 +8,7 @@
 #   Fedora:  sudo dnf install graphviz
 #   Ubuntu:  sudo apt install graphviz
 
-tensorflow>=2.16,<2.21
+tensorflow
 pandas>=2.0
 numpy>=1.26,<2.3
 pydot>=3.0
