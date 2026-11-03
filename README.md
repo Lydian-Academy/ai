@@ -70,11 +70,11 @@ Input (29 features)
 
 ### Step 1 — Install Python
 
-This project needs **Python 3.10 – 3.12** (TensorFlow publishes wheels for these versions).
+This project needs **Python 3.10 – 3.13** (TensorFlow publishes wheels for cp310–cp313; 3.14 is not yet supported).
 
 **Windows**
 
-1. Go to [python.org/downloads](https://www.python.org/downloads/) and download the latest Python 3.12 installer.
+1. Go to [python.org/downloads](https://www.python.org/downloads/) and download a Python 3.12 or 3.13 installer (avoid 3.14 — no TensorFlow wheels yet).
 2. Run the installer and **check ✅ "Add python.exe to PATH"** on the first screen — if you miss this, `python` won't work in the terminal.
 3. Verify: open Command Prompt (or PowerShell) and run:
    ```powershell
@@ -88,7 +88,7 @@ Option A — Homebrew (recommended):
 # Install Homebrew first if you don't have it:
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-brew install python@3.12
+brew install python@3.13
 python3 --version
 ```
 
@@ -125,7 +125,7 @@ pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-Verified working set (Linux x86_64, Python 3.12): **TensorFlow 2.20.0, pandas 3.1.0, numpy 2.2.6, pydot, graphviz, tensorboard**.
+Verified working sets (Linux x86_64, full pipeline run end-to-end): **Python 3.12 / TensorFlow 2.20.0 / numpy 2.2.6** and **Python 3.13 / TensorFlow 2.21.0 / numpy 2.5.4** (with pandas 3.1.0, pydot, graphviz, tensorboard).
 
 `plot_model` also needs the **Graphviz system binary** (the pip package alone is not enough):
 

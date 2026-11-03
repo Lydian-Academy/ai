@@ -1,5 +1,5 @@
 # Lung Cancer Risk Prediction — dependencies
-# Requires Python 3.10–3.12 (TensorFlow does not publish wheels for 3.13+ on all platforms)
+# Requires Python 3.10–3.13 (TensorFlow publishes cp310–cp313 wheels; 3.14 is not yet supported)
 #
 # NOTE: the `graphviz` pip package is only the Python binding.
 # The Graphviz system binary (`dot`) must also be installed:
@@ -8,9 +8,9 @@
 #   Fedora:  sudo dnf install graphviz
 #   Ubuntu:  sudo apt install graphviz
 
-tensorflow
+tensorflow>=2.16
 pandas>=2.0
-numpy>=1.26,<2.3
+numpy>=1.26
 pydot>=3.0
 graphviz>=0.20
 tensorboard>=2.16
