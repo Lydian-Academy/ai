@@ -10,7 +10,7 @@ import os
 os.environ["PATH"] += os.pathsep + "/opt/homebrew/bin"
 
 Lung_cancer_training_data = pd.read_csv(
-    "/Users/ad/Desktop/lung_cancer.csv",
+    "lung_cancer.csv",
     names=["age","gender","education_years","income_level","smoker","smoking_years","cigarettes_per_day","pack_years","passive_smoking","air_pollution_index","occupational_exposure",
     "radon_exposure","family_history_cancer","copd","asthma","previous_tb","chronic_cough","chest_pain","shortness_of_breath","fatigue","bmi","oxygen_saturation",
     "fev1_x10","crp_level","xray_abnormal","exercise_hours_per_week","diet_quality","alcohol_units_per_week","healthcare_access","lung_cancer_risk"])
