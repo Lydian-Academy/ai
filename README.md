@@ -1,6 +1,6 @@
 # Lung Cancer Risk Prediction
 
-A beginner-friendly deep learning project from [Lydian Academy](https://github.com/Lydian-Academy) that trains a Keras/TensorFlow neural network to predict lung cancer risk from 29 patient features.
+A beginner-friendly deep learning project from [Lydian Academy](https://github.com/Lydian-Academy) that trains a Keras/TensorFlow neural network to predict lung cancer risk from 29 patient features. Using data from [kaggle Lung Cance Prediction Dataset](https://www.kaggle.com/datasets/bharatxjain/lung-cance-prediction-dataset)
 
 ## Project structure
 
@@ -14,6 +14,9 @@ ai/
 
 ## The dataset
 
+The Lung Cancer dataset contains health and lifestyle information used to predict whether an individual has lung cancer. It includes both demographic and clinical features related to smoking habits, respiratory symptoms, and general health conditions.
+
+Each row represents a unique individual's record, and the dataset is structured for binary classification with the target variable being the presence or absence of lung cancer.
 `lung_cancer.csv` contains 4,999 synthetic patient records with 30 columns and **no header row** — column names are assigned in the script via `pd.read_csv(..., names=[...])`.
 
 | # | Column | Type | Description |
@@ -141,12 +144,6 @@ On **Windows**, download the installer from [graphviz.org/download](https://grap
 
 ### Step 4 — Point the script at your data
 
-Line 13 currently reads:
-
-```python
-"/Users/ad/Desktop/lung_cancer.csv"
-```
-
 Change it to wherever your copy lives — or, if `lung_cancer.csv` sits next to the script, simply use:
 
 ```python
@@ -167,21 +164,5 @@ First run downloads/loads TensorFlow and trains for 10 epochs — expect a minut
 tensorboard --logdir logs/fit
 # then open http://localhost:6006
 ```
-
-## Notes & known limitations
-
-- **Hard-coded data path** — line 13 must be edited to match your machine before the script runs.
-- **Normalization is defined but not wired in** — a `Normalization` layer is adapted to the data but never added to the model; the raw feature array is fed straight into `fit()`.
-- **MSE loss + `accuracy` metric** on an unthresholded sigmoid output is a simplification for learning purposes; `BinaryCrossentropy` with a proper train/test split would be the standard setup.
-- **No train/validation/test split** — the model is trained and evaluated on the same data, so reported accuracy is optimistic.
-- **This is an educational exercise, not a medical tool.** The dataset is synthetic and the model must never be used for real clinical decisions.
-
-## Roadmap (from the author's TODO)
-
-- [ ] Apply the normalization layer inside the model
-- [ ] Save/load the trained model
-- [ ] Add a train/test split and proper evaluation metrics
-
----
 
 *Built as part of Lydian Academy STEM coursework.*
