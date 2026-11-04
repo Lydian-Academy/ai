@@ -1,6 +1,6 @@
 # Lung Cancer Risk Prediction
 
-A beginner-friendly deep learning project from [Lydian Academy](https://github.com/Lydian-Academy) that trains a Keras/TensorFlow neural network to predict lung cancer risk from 29 patient features. Using data from [kaggle Lung Cance Prediction Dataset](https://www.kaggle.com/datasets/bharatxjain/lung-cance-prediction-dataset)
+A beginner-friendly deep learning project from [Lydian Academy](https://github.com/Lydian-Academy) that trains a Keras/TensorFlow neural network to predict lung cancer risk from 29 patient features. Using [kaggle Lung Cance Prediction Dataset](https://www.kaggle.com/datasets/bharatxjain/lung-cance-prediction-dataset)
 
 ## Project structure
 
@@ -112,11 +112,11 @@ Keeps this project's packages isolated from your system Python:
 
 ```bash
 # From the folder containing LungCancerRegression.py:
-python -m venv venv            # Windows
-python3 -m venv venv           # macOS / Linux
+python -m venv .venv            # Windows
+python3 -m venv .venv           # macOS / Linux
 
-venv\Scripts\activate          # activate on Windows
-source venv/bin/activate       # activate on macOS / Linux
+.venv\Scripts\activate          # activate on Windows
+source .venv/bin/activate       # activate on macOS / Linux
 ```
 
 Your prompt should now show `(venv)`.
