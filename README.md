@@ -73,6 +73,8 @@ Input (29 features)
 
 ### Step 1 — Install Python
 
+**NOTE:** If you already use an IDE with Python included (ie. PyCharm, Thonny, Visual Studio, ect) you can skip this step. If you aren't using an IDE **install** [Thonny](https://thonny.org/).
+
 This project needs **Python 3.10 – 3.13** (TensorFlow publishes wheels for cp310–cp313; 3.14 is not yet supported).
 
 **Windows**
