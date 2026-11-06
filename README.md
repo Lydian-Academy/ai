@@ -77,6 +77,10 @@ Input (29 features)
 
 This project needs **Python 3.10 – 3.13** (TensorFlow publishes wheels for cp310–cp313; 3.14 is not yet supported).
 
+<details>
+
+<summary>Manually install Python interpreter (optional)</summary>
+
 **Windows**
 
 1. Go to [python.org/downloads](https://www.python.org/downloads/) and download a Python 3.12 or 3.13 installer (avoid 3.14 — no TensorFlow wheels yet).
@@ -105,6 +109,7 @@ Option B — official installer: download the macOS package from [python.org/dow
 sudo dnf install python3 python3-pip     # Fedora
 sudo apt install python3 python3-pip     # Ubuntu/Debian
 ```
+</details>
 
 ### Step 2 — Create a virtual environment (recommended)
 
