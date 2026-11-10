@@ -1,7 +1,7 @@
 # Lung Cancer Risk Prediction
 [New dataset](https://www.kaggle.com/datasets/mysarahmadbhat/lung-cancer)
 
-A beginner-friendly deep learning project from [Lydian Academy](https://github.com/Lydian-Academy) that trains a Keras/TensorFlow neural network to predict lung cancer risk from 29 patient features. Using [kaggle Lung Cance Prediction Dataset](https://www.kaggle.com/datasets/bharatxjain/lung-cance-prediction-dataset)
+A beginner-friendly deep learning project that trains a Keras/TensorFlow neural network to predict lung cancer risk from 29 patient features. Using [kaggle Lung Cance Prediction Dataset](https://www.kaggle.com/datasets/bharatxjain/lung-cance-prediction-dataset)
 
 ## Project structure
 
@@ -74,14 +74,18 @@ Input (29 features)
 
 ### Step 1 — Install Python
 
-**NOTE:** If you already use an IDE with Python included (ie. PyCharm, Thonny, Visual Studio, ect) you can skip this step. If you aren't using an IDE **install** [Thonny](https://thonny.org/).
+If you already use an IDE with Python included (ie. PyCharm, Thonny, Visual Studio, VS Code, ect) you can skip this step. If you aren't using an IDE **install** [Thonny](https://thonny.org/).
 
 This project needs **Python 3.10 – 3.13** (TensorFlow publishes wheels for cp310–cp313; 3.14 is not yet supported).
+
+<details>
+
+<summary>Manually install Python interpreter (optional)</summary>
 
 **Windows**
 
 1. Go to [python.org/downloads](https://www.python.org/downloads/) and download a Python 3.12 or 3.13 installer (avoid 3.14 — no TensorFlow wheels yet).
-2. Run the installer and **check ✅ "Add python.exe to PATH"** on the first screen — if you miss this, `python` won't work in the terminal.
+2. Run the installer and **check "☑︎ Add python.exe to PATH"** on the first screen — if you miss this, `python` won't work in the terminal.
 3. Verify: open Command Prompt (or PowerShell) and run:
    ```powershell
    python --version
@@ -98,23 +102,17 @@ brew install python@3.13
 python3 --version
 ```
 
-Option B — official installer: download the macOS package from [python.org/downloads](https://www.python.org/downloads/) and double-click it. macOS also ships a system Python, but don't rely on it — use your own install.
+Option B — official installer: download the macOS package from [python.org/downloads](https://www.python.org/downloads/) and double-click it. macOS also ships a system Python, but don't rely on it — use your own install/Thonny's install.
 
-**Linux (Fedora / Ubuntu)**
-
-```bash
-sudo dnf install python3 python3-pip     # Fedora
-sudo apt install python3 python3-pip     # Ubuntu/Debian
-```
+</details>
 
 ### Step 2 — Create a virtual environment (recommended)
 
 Keeps this project's packages isolated from your system Python:
 
-```bash
-# From the folder containing LungCancerRegression.py:
-python -m venv .venv            # Windows
-python3 -m venv .venv           # macOS / Linux
+**Run in the folder containing LungCancerRegression.py:**
+`python -m venv .venv`            # Windows
+`python3 -m venv .venv`           # macOS / Linux
 
 .venv\Scripts\activate          # activate on Windows
 source .venv/bin/activate       # activate on macOS / Linux
@@ -135,13 +133,12 @@ Verified working sets (Linux x86_64, full pipeline run end-to-end): **Python 3.1
 
 `plot_model` also needs the **Graphviz system binary** (the pip package alone is not enough):
 
+**macOS**
 ```bash
-brew install graphviz          # macOS
-sudo dnf install graphviz      # Fedora
-sudo apt install graphviz      # Ubuntu/Debian
+brew install graphviz
 ```
 
-On **Windows**, download the installer from [graphviz.org/download](https://graphviz.org/download/), run it, and add `C:\Program Files\Graphviz\bin` to your PATH (the installer offers an "Add to PATH" option).
+**Windows**, download the installer from [graphviz.org/download](https://graphviz.org/download/), run it, and add `C:\Program Files\Graphviz\bin` to your PATH (the installer offers an "Add to PATH" option).
 
 > Note: the script contains a macOS-only PATH hack (`/opt/homebrew/bin`, line 10). On Windows/Linux you can delete that line once Graphviz is on your PATH.
 
@@ -165,7 +162,7 @@ First run downloads/loads TensorFlow and trains for 10 epochs — expect a minut
 
 ```bash
 tensorboard --logdir logs/fit
-# then open http://localhost:6006
 ```
+**then open [http://localhost:6006](http://localhost:6006)**
 
 *Built as part of Lydian Academy STEM coursework.*
