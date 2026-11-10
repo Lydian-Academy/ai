@@ -111,11 +111,17 @@ Option B — official installer: download the macOS package from [python.org/dow
 Keeps this project's packages isolated from your system Python:
 
 **Run in the folder containing LungCancerRegression.py:**
-`python -m venv .venv`            # Windows
-`python3 -m venv .venv`           # macOS / Linux
 
-.venv\Scripts\activate          # activate on Windows
-source .venv/bin/activate       # activate on macOS / Linux
+MacOS / Linux:
+```shell
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+Windows:
+```shell
+python -m venv .venv
+.venv\Scripts\activate
 ```
 
 Your prompt should now show `(venv)`.
