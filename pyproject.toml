@@ -1,0 +1,12 @@
+[project]
+name = "ai"
+description = "A machine learning and data analysis project"
+requires-python = "~=3.13.0"
+dependencies = [
+    "tensorflow",
+    "pandas",
+    "numpy",
+    "pydot",
+    "graphviz",
+    "tensorboard",
+]
